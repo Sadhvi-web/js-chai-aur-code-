@@ -41,4 +41,30 @@ console.log(typeof(myFunction))
 
 // ------------------------------------------------------
 // Memory are of two types:
-// 
+
+// Stack memory(Primitive Datatypes) 
+// Key Behavior:
+// Copy of value stored directly
+// Changes to copy don't affect original 
+let myYoutube = "SadhviVlogs.com"
+let anotherName = myYoutube
+anotherName = "Vlog with Sadhvi"
+console.log(myYoutube)
+console.log(anotherName)
+
+// and Heap memory(Non-Primitive Datatypes)
+// Key Behavior:
+// Reference (address) stored in stack s
+// Actual object stored in heap s
+// Changes via reference affect original 
+let user1 = {
+    name:"Sadhvi",
+    email:"sadhvi@google"
+}
+let user2 = user1
+user2.email = "Saw23.com"
+console.log(user1.email)
+console.log(user2.email)
+
+// Q: Why does changing userTwo.email affect userOne?
+// A: Both variables hold **same heap reference**, not copies
