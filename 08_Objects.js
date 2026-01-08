@@ -1,5 +1,5 @@
 // Object literals
-// Create a JavaScript Object
+// Create a JavaScript Object Using Object Literal
 const JsUser = {
     name:"Sadhvi",
     "full name" : "Sadhu Kri",
@@ -52,3 +52,37 @@ JsUser.greetings = function(){
 
 console.log(JsUser.greetings);
 console.log(JsUser.greetings());
+
+
+// Constructor in object
+// Creation Using new Object() Constructor
+// const tinderUser = new Object()      // This is a single ton object
+const tinderUser = {}                   // This is not a singleton object
+tinderUser.name = "Sadhvi",
+tinderUser.age = 20,
+tinderUser.isLoggedIn = false
+console.log(tinderUser);
+
+const regularUser = {
+    Userfullname : {
+        firstName : "Sadhvi",
+        lastName : "Kumari"
+    }
+}
+console.log(regularUser);
+console.log(regularUser.Userfullname);
+console.log(regularUser.Userfullname.firstName);
+console.log(regularUser.Userfullname.lastName);
+
+// Merging Objects
+const obj1 = {1:"a",2:"b",3:"c"}
+const obj2 = {40:"d",50:"e"}
+
+// const obj3 = Object.assign({},obj1,obj2)     //we wont use this
+const obj3 = {...obj1,...obj2}                  // We will use this
+console.log(obj3);
+
+console.log(Object.keys(tinderUser));
+console.log(Object.values(tinderUser));
+console.log(Object.entries(tinderUser));
+console.log(tinderUser.hasOwnProperty('isLoggedIn'));
