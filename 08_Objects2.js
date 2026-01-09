@@ -11,3 +11,8 @@ console.log(coursename);
 const {coursename:Cname} = course
 console.log(Cname);
 
+// JSON (JavaScript Object Notation) API
+// {
+//     "name" : "Chai aur code",
+//     "price" : "Rs19,999",
+// }
