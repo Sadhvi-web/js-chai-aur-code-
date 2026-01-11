@@ -43,3 +43,32 @@ function one(){
     two()   // Gives output sadhvi by accessing outer variable
 }
 one()   // Returns Nothing
+
+
+// if statement also has block scope
+if (true){
+    const username = 'Sadhvi'
+    if (username === 'Sadhvi'){
+        const website = 'youtube'
+        console.log(username + website);
+    }
+    // console.log(website);        // Gives error
+}
+// console.log(username);           // Gives error
+
+
+// two ways to write a function
+// Method 1
+console.log(addone(5));         // Output : 6
+function addone(num){
+    return num + 1
+}
+// console.log(addone(5));       // Output : 6
+
+
+// Method 2
+// console.log(addTwo(7));         // Shows error because of mini hoisting
+const addTwo = function(num){
+    return num + 2
+}
+// console.log(addTwo(7));      // Output : 9
